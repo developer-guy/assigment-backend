@@ -1,0 +1,21 @@
+spring:
+ application:
+    name: minidolap-backend
+ jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 9091
+hikari:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+redis:
+    host-name: 127.0.0.1
+    port: 6379
+token:
+  secretKey: ${MINI_SECRET}
